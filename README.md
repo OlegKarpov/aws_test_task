@@ -15,4 +15,13 @@
     aws configure
     ```
     
-   
+3. Generate template (lambda.json):
+    ```
+    python generate_cloudformation_template.py
+    ```
+    
+4. Create Stack:
+    ```
+    sceptre create dev/lambda.yaml
+    ```
+    

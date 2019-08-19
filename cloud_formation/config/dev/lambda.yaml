@@ -1,4 +1,4 @@
-template_path: lambda-func.json
+template_path: lambda.json
 parameters:
   DBName: postgres
   DBPassword: postgres
