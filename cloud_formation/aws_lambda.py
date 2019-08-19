@@ -37,7 +37,7 @@ lambda_processing = awslambda.Function(
     'LambdaProcessing',
     Handler='lambda_function.lambda_handler',
     Role=GetAtt("LambdaExecutionRole", "Arn"),
-    Runtime='python3.7',
+    Runtime='python2.7',
     FunctionName=Ref(lambda_name),
     Code=awslambda.Code(
         S3Bucket=Ref(source_code_bucket),
