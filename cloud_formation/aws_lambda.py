@@ -33,9 +33,6 @@ lambda_name = Parameter(
     Type="String",
 )
 
-# ============================================================================
-# Lambda Function
-# ============================================================================
 lambda_processing = awslambda.Function(
     'LambdaProcessing',
     Handler='lambda_function.lambda_handler',
@@ -59,9 +56,7 @@ lambda_processing = awslambda.Function(
     )
 )
 
-# ============================================================================
-# Lambda Permission
-# ============================================================================
+# permissions
 s3_lambda_permission = awslambda.Permission(
     'S3LambdaPermission',
     Action='lambda:invokeFunction',

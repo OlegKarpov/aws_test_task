@@ -1,4 +1,3 @@
-
 from troposphere import (
     Ref,
     sns,

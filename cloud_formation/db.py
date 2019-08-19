@@ -37,10 +37,7 @@ db_name = Parameter(
     ConstraintDescription="must contain only alphanumeric characters."
 )
 
-
-"""
-Posgress DB
-"""
+# Postgres
 db = rds.DBInstance(
     'Postgres',
     DBInstanceClass='db.t2.micro',
@@ -51,10 +48,7 @@ db = rds.DBInstance(
     MasterUserPassword=Ref(db_password),
 )
 
-
-"""
-Dynamo DB
-"""
+# Dynamodb
 dynamo_db = dynamodb.Table(
     'DynamoDBLog',
     TableName='DynamoDBLog',
