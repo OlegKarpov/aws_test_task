@@ -8,7 +8,6 @@
     ```
     pip install -r requirements.txt
     ```
-    (https://docs.pipenv.org/#install-pipenv-today)
 
 2. Set awscli credentials (Public key, Private key):
     ```
