@@ -3,6 +3,6 @@ parameters:
   DBName: postgres
   DBPassword: postgres
   DBUser: postgres
-  SourceCodeBucket: karpov-test-aws
+  SourceCodeBucket: test-aws-s3
   ZipFilePath: dev_lambda.zip
   LambdaName: LambdaS3
