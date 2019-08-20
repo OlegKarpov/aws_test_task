@@ -1,2 +1,8 @@
-project_code: cloudformation
-region: eu-central-1
+template_path: lambda.yaml
+parameters:
+  DBName: postgres
+  DBPassword: postgres
+  DBUser: postgres
+  SourceCodeBucket: karpov-test-aws
+  ZipFilePath: dev_lambda.zip
+  LambdaName: LambdaS3
