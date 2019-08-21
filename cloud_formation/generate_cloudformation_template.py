@@ -14,6 +14,7 @@ t.add_parameter(aws_lambda.source_code_bucket)
 t.add_parameter(aws_lambda.zip_file_path)
 t.add_parameter(aws_lambda.lambda_name)
 
+# create bucket for uploading
 t.add_resource(bucket.bucket)
 
 t.add_resource(db.db)

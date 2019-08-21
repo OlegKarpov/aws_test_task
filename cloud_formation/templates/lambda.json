@@ -131,35 +131,7 @@
                     }
                 },
                 "Environment": {
-                    "Variables": {
-                        "DB_HOST": {
-                            "Fn::GetAtt": [
-                                "Postgres",
-                                "Endpoint.Address"
-                            ]
-                        },
-                        "DB_NAME": {
-                            "Ref": "DBName"
-                        },
-                        "DB_PASSWORD": {
-                            "Ref": "DBPassword"
-                        },
-                        "DB_PORT": {
-                            "Fn::GetAtt": [
-                                "Postgres",
-                                "Endpoint.Port"
-                            ]
-                        },
-                        "DB_USERNAME": {
-                            "Ref": "DBUser"
-                        },
-                        "DYNAMODB_TABLE": {
-                            "Ref": "DynamoDBLog"
-                        },
-                        "SNS_TOPIC": {
-                            "Ref": "SNSTopic"
-                        }
-                    }
+                    "Variables": {}
                 },
                 "FunctionName": {
                     "Ref": "LambdaName"
@@ -207,7 +179,7 @@
         },
         "SNSTopicSubscription": {
             "Properties": {
-                "Endpoint": "bogdan.gm24@gmail.com",
+                "Endpoint": "karpovhub@gmail.com",
                 "Protocol": "email",
                 "TopicArn": {
                     "Ref": "SNSTopic"
@@ -216,24 +188,7 @@
             "Type": "AWS::SNS::Subscription"
         },
         "UploadedResources": {
-            "DependsOn": [
-                "LambdaProcessing"
-            ],
             "Properties": {
-                "BucketName": "uploaded-file-processing-ee5a4c2a-b5a7-4b80-ac22-5763e7a93552",
-                "NotificationConfiguration": {
-                    "LambdaConfigurations": [
-                        {
-                            "Event": "s3:ObjectCreated:*",
-                            "Function": {
-                                "Fn::GetAtt": [
-                                    "LambdaProcessing",
-                                    "Arn"
-                                ]
-                            }
-                        }
-                    ]
-                },
                 "VersioningConfiguration": {
                     "Status": "Enabled"
                 }
