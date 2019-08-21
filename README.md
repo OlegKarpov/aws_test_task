@@ -19,8 +19,11 @@
     python generate_cloudformation_template.py
     ```
     
-4. Create Stack:
+4. Stack operations:
     ```
-    sceptre create dev/lambda.yaml
+    sceptre create dev
     ```
-    
+    If you need to delete stack:
+    ```
+    sceptre delete dev
+    ```
