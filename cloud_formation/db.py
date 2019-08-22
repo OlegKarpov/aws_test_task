@@ -5,6 +5,8 @@ from troposphere import (
     rds,
 )
 
+from cloud_formation.constants import DYNAMO_DB_TABLE
+
 db_user = Parameter(
     "DBUser",
     Description="The database admin account username",
@@ -51,7 +53,7 @@ db = rds.DBInstance(
 # Dynamodb
 dynamo_db = dynamodb.Table(
     'DynamoDBLog',
-    TableName='DynamoDBLog',
+    TableName=DYNAMO_DB_TABLE,
     AttributeDefinitions=[dynamodb.AttributeDefinition(
         AttributeName='request_id',
         AttributeType='S',
